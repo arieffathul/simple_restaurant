@@ -4,6 +4,9 @@ const port = 3000;
 
 const categoriesRouter = require("./routes/categories");
 
+// middleware
+app.use(express.json());
+
 // routes
 app.use("/categories", categoriesRouter);
 
