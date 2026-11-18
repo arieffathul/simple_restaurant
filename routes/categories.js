@@ -5,17 +5,7 @@ const {
 } = require("../controllers/categoryController");
 const router = express.Router();
 
-// routes
-// router.get("/", (req, res) => {
-//   res.json({
-//     message: "List of categories",
-//     data: [
-//       { id: 1, name: "Appetizers" },
-//       { id: 2, name: "Main Course" },
-//     ],
-//   });
-// });
-
+// get all
 router.get("/", getAllCategories);
 
 // router.post("/", (req, res) => {
