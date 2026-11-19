@@ -2,22 +2,22 @@ const express = require("express");
 const {
   getAllCategories,
   storeCategory,
+  detailCategory,
+  updateCategory,
 } = require("../controllers/categoryController");
 const router = express.Router();
 
 // get all
 router.get("/", getAllCategories);
 
-// router.post("/", (req, res) => {
-//   res.send("Create a new category");
-// });
+// get detail
+router.get("/:id", detailCategory);
 
+// post
 router.post("/", storeCategory);
 
-// get with params
-router.get("/:nama", (req, res) => {
-  res.send(`Get category with name: ${req.params.nama}`);
-});
+// update
+router.put("/:id", updateCategory);
 
 // export function router
 module.exports = router;

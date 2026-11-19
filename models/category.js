@@ -31,7 +31,9 @@ module.exports = (sequelize, DataTypes) => {
     {
       hooks: {
         beforeValidate: (category) => {
-          category.nama = category.nama.trim().toLowerCase();
+          if (category.nama) {
+            category.nama = category.nama.trim().toLowerCase();
+          }
         },
       },
       sequelize,
